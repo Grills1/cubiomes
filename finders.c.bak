@@ -4778,7 +4778,7 @@ const int *getBiomeParaLimits(int mc, int id)
         -10500, 300,
         -7799, 5500,
         1000, 10500, // depth has more dependencies
-        -22333, 22333,
+        -9333, 9333,
     }
 
     n = sizeof(g_biome_para_range_18) / sizeof(g_biome_para_range_18[0]);
