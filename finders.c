@@ -4771,7 +4771,6 @@ const int *getBiomeParaLimits(int mc, int id)
         return NULL;
     int i, n;
     if (mc >= MC_1_19)
-		return NULL;
        static const int extremes[] = {
         -4501, 5500,
         -3500, 6999,
@@ -4779,17 +4778,9 @@ const int *getBiomeParaLimits(int mc, int id)
         -7799, 5500,
         1000, 10500, // depth has more dependencies
         -22333, 22333,
-    }
-
-    n = sizeof(g_biome_para_range_18) / sizeof(g_biome_para_range_18[0]);
-    for (i = 0; i < n; i++)
-    {
-        if (g_biome_para_range_18[i][0] == id)
-            return &g_biome_para_range_18[i][1];
-    }
-    return NULL;
+    };
+return extremes;
 }
-
 /**
  * Determines which biomes are able to generate given climate parameter limits.
  * Possible biomes are marked non-zero in the 'ids'.
